@@ -14,7 +14,7 @@ class OS {
    public:
       OS() {}
    
-   void addHandler(shader_prt <EventHandler> handler) {eventHandler.push_back(handler);}
+   void addHandler(shader_ptr <EventHandler> handler) {eventHandler.push_back(handler);}
    
    private:
       std::vector <std::shared_ptr<EventHandler>> eventHandlers;
