@@ -1,6 +1,5 @@
 //
 //  OS.h
-//  IpadInterface
 //
 //  Created by Aleksi Leino on 14/08/14.
 //
@@ -9,5 +8,6 @@
 #define IpadInterface_OS_h
 
 class OS;
+
 
 #endif

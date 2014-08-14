@@ -11,8 +11,8 @@ class EventHandler {
   public:
     EventHandler() {}
     
-    virtual void pressBegin(pressEvent &ev);
-    virtual void pressEnd(pressEvent &ev);
+    virtual void pressBegin(PressEvent &ev);
+    virtual void pressEnd(PressEvent &ev);
 }
 
 
