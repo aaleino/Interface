@@ -9,7 +9,7 @@
 
 class EventHandler {
   public:
-    EventHandler(); {}
+    EventHandler() {}
     
     virtual void pressBegin(pressEvent &ev);
     virtual void pressEnd(pressEvent &ev);
