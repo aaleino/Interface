@@ -1,5 +1,5 @@
-#include "../Event.h"
-#include "../EventHandler.h"
+#include "../Generic/Event.h"
+#include "../Generic/EventHandler.h"
 
 // Ios Example
 

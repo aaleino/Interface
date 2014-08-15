@@ -16,8 +16,8 @@ class PressEvent : public Event {
 		int getx() { return loc_x; }
 		int gety() { return loc_y; }
 
-		int setx(int x) { loc_x = x; }
-		int sety(int y) { loc_y = y; }
+		void setx(int x) { loc_x = x; }
+		void sety(int y) { loc_y = y; }
 
    private: 
 		int loc_x, loc_y; 
