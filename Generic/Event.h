@@ -20,7 +20,8 @@ class PressEvent : public Event {
 		void sety(int y) { loc_y = y; }
 
    private: 
-		int loc_x, loc_y; 
+		int loc_x, loc_y;
+        int identifier; // for multiple simultaneous presses
 };
 
 #endif

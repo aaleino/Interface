@@ -4,13 +4,13 @@
 //  Created by Aleksi Leino on 14/08/14.
 //
 
-#ifndef IpadInterface_OS_h
-#define IpadInterface_OS_h
+#ifndef _OS_h
+#define _OS_h
 
 #include <vector>
 #include <memory>
 #include "EventHandler.h"
-
+#include "Context.h"
 
 class OS {
    public:
@@ -22,9 +22,11 @@ class OS {
    void pressEnd(int x, int y);
    
    virtual int getScreenWidth() { return 0; }
-   virtual int getScreenheight() { return 0; }
+   virtual int getScreenHeight() { return 0; }
 
-   
+   virtual std::unique_ptr <canvas::Context> getScreenContext() { return nullptr; }
+   virtual std::unique_ptr <canvas::Context> getMemoryContext() { return nullptr; }
+
    static void setInstance(std::shared_ptr <OS> i) {
 	   instance = i;
    }
