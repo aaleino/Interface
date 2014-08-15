@@ -17,6 +17,9 @@ class OS {
       OS() {}
    
    void addHandler(std::shared_ptr <EventHandler> handler) {eventHandlers.push_back(handler);}
+   void pressBegin(int x, int y);
+   void pressMove(int x, int y);
+   void pressEnd(int x, int y);
    
    private:
       std::vector < std::shared_ptr <EventHandler> > eventHandlers;
