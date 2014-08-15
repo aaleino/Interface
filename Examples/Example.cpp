@@ -1,8 +1,8 @@
 #include "../Generic/Event.h"
 #include "../Generic/EventHandler.h"
 
-// Ios Example
+// Example
 
-class iOSExample : public EventHandler {
-	iOSExample() {}
+class Example : public EventHandler {
+	Example() {}
 };
