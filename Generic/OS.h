@@ -20,7 +20,7 @@ class OS {
    void pressBegin(int x, int y);
    void pressMove(int x, int y);
    void pressEnd(int x, int y);
-
+   
    virtual int getScreenWidth() { return 0; }
    virtual int getScreenheight() { return 0; }
 
