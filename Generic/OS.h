@@ -25,7 +25,7 @@ class OS {
    virtual int getScreenHeight() { return 0; }
 
    virtual std::unique_ptr <canvas::Context> getScreenContext() { return nullptr; }
-   virtual std::unique_ptr <canvas::Context> getMemoryContext(int width, int height) { return nullptr; }
+   virtual std::shared_ptr <canvas::Context> createMemoryContext(unsigned int width, unsigned int height) { return nullptr; }
 
    static void setInstance(std::shared_ptr <OS> i) {
 	   instance = i;

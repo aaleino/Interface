@@ -1,4 +1,3 @@
-
 #ifndef _IOS_H_
 #define _IOS_H_
 
@@ -12,7 +11,7 @@ class iOS : public OS {
     iOS() {}
     
     std::unique_ptr <canvas::Context> getScreenContext() { return nullptr; }
-    std::unique_ptr <canvas::Context> getMemoryContext(int width, int height) { return nullptr; }
+    std::shared_ptr <canvas::Context> createMemoryContext(unsigned int width, unsigned int height) { return std::shared_ptr <canvas::Context> (new canvas::ContextQuartz2D(width, height)); }
 
 };
 
