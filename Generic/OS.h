@@ -20,9 +20,22 @@ class OS {
    void pressBegin(int x, int y);
    void pressMove(int x, int y);
    void pressEnd(int x, int y);
+
+   virtual int getScreenWidth() { return 0; }
+   virtual int getScreenheight() { return 0; }
    
+   static void setInstance(std::shared_ptr <OS> i) {
+	   instance = i;
+   }
+
+   static std::shared_ptr <OS> getInstance() {
+	   return instance;
+   }
+
    private:
       std::vector < std::shared_ptr <EventHandler> > eventHandlers;
+
+   static std::shared_ptr <OS> instance;
 };
 
 
