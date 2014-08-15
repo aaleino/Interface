@@ -15,11 +15,13 @@ class PressEvent : public Event {
 		PressEvent() {};
 		int getx() { return loc_x; }
 		int gety() { return loc_y; }
+        int getIdentifier() { return identifier; }
 
 		void setx(int x) { loc_x = x; }
 		void sety(int y) { loc_y = y; }
+        void setIdentifier(int _identifier) { identifier = _identifier;}
 
-   private: 
+   private:
 		int loc_x, loc_y;
         int identifier; // for multiple simultaneous presses
 };
