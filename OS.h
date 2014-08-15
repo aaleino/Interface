@@ -8,17 +8,19 @@
 #define IpadInterface_OS_h
 
 #include <vector>
+#include <memory>
 #include "EventHandler.h"
+
 
 class OS {
    public:
       OS() {}
    
-   void addHandler(shader_ptr <EventHandler> handler) {eventHandler.push_back(handler);}
+   void addHandler(std::shared_ptr <EventHandler> handler) {eventHandlers.push_back(handler);}
    
    private:
-      std::vector <std::shared_ptr<EventHandler>> eventHandlers;
-}
+      std::vector < std::shared_ptr <EventHandler> > eventHandlers;
+};
 
 
 #endif
