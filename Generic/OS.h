@@ -32,11 +32,13 @@ class OS {
    static std::shared_ptr <OS> getInstance() {
 	   return instance;
    }
-
+   
+    static std::shared_ptr <OS> instance;
+    
    private:
       std::vector < std::shared_ptr <EventHandler> > eventHandlers;
 
-   static std::shared_ptr <OS> instance;
+
 };
 
 

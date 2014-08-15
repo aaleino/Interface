@@ -8,7 +8,7 @@
 
 class iOS : public OS {
   public:
-    class iOS() {}
+    iOS() {}
 
 };
 
