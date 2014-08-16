@@ -16,6 +16,10 @@ class EventHandler {
     virtual void pressBegin(PressEvent &ev);
 	virtual void pressMove(PressEvent &ev);
     virtual void pressEnd(PressEvent &ev);
+    
+    // TODO: PaintEvent
+    virtual void redraw();
+    
 };
 
 

@@ -30,3 +30,9 @@ void OS::pressEnd(int x, int y, int identifier) {
 		element->pressEnd(ev);
 	}
 }
+
+void OS::redraw() {
+	for (auto & element : eventHandlers) {
+		element->redraw();
+	}
+}
