@@ -11,7 +11,7 @@ class iOS : public OS {
   public:
     iOS() {}
     
-    std::unique_ptr <canvas::Context> getScreenContext() {return std::unique_ptr <canvas::Context> (new canvas::ContextQuartz2D(getScreenWidth(), getScreenHeight(), screen_gc)); }
+    std::unique_ptr <canvas::Context> getScreenContext() {return std::unique_ptr <canvas::Context> (new canvas::ContextQuartz2D(getScreenWidth(), getScreenHeight(), screen_gc, true)); }
     std::shared_ptr <canvas::Context> createMemoryContext(unsigned int width, unsigned int height) { return std::shared_ptr <canvas::Context> (new canvas::ContextQuartz2D(width, height)); }
     
     void setScreengc(CGContextRef _gc) {

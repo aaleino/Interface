@@ -32,7 +32,9 @@ void OS::pressEnd(int x, int y, int identifier) {
 }
 
 void OS::redraw() {
+
 	for (auto & element : eventHandlers) {
 		element->redraw();
 	}
+
 }

@@ -14,8 +14,6 @@ void Example::pressBegin(PressEvent &ev) {
 
 void Example::redraw() {
     std::unique_ptr <canvas::Context> graphicscontext = (OS::getInstance())->getScreenContext();
-    
-    graphicscontext->fillRect(10, 10, 10, 10);
-
+    graphicscontext->fillRect(100, 100, 100, 100);
 };
 
