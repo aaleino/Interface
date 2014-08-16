@@ -11,10 +11,12 @@ class iOS : public OS {
   public:
     iOS() {}
     
-    std::unique_ptr <canvas::Context> getScreenContext() { return nullptr; }
+    std::unique_ptr <canvas::Context> getScreenContext() {return std::unique_ptr <canvas::Context> (new canvas::ContextQuartz2D(getScreenWidth(), getScreenHeight(), screen_gc)); }
     std::shared_ptr <canvas::Context> createMemoryContext(unsigned int width, unsigned int height) { return std::shared_ptr <canvas::Context> (new canvas::ContextQuartz2D(width, height)); }
     
-    void setScreengc(CGContextRef _gc) { screen_gc = _gc;}
+    void setScreengc(CGContextRef _gc) {
+        screen_gc = _gc;
+    }
     
 private:
     CGContextRef screen_gc;

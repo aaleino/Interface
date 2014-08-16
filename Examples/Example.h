@@ -9,7 +9,19 @@
 #define _Example_h
 
 
-class Example;
 
+
+class Example : public EventHandler {
+public:
+	Example() {}
+    
+    void pressBegin(PressEvent &ev);
+	void pressMove(PressEvent &ev){};
+    void pressEnd(PressEvent &ev){};
+    
+  
+    void redraw();
+
+};
 
 #endif
