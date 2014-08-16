@@ -8,12 +8,12 @@
 #ifndef _Example_h
 #define _Example_h
 
-
+#include <vector>
 
 
 class Example : public EventHandler {
 public:
-	Example() {}
+	Example();
     
     void pressBegin(PressEvent &ev);
 	void pressMove(PressEvent &ev){};
@@ -21,6 +21,10 @@ public:
     
   
     void redraw();
+    
+private:
+    
+    int x, y;
 
 };
 
