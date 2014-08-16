@@ -16,7 +16,7 @@ public:
 	Example();
     
     void pressBegin(PressEvent &ev);
-	void pressMove(PressEvent &ev){};
+    void pressMove(PressEvent &ev){};
     void pressEnd(PressEvent &ev){};
     
   
