@@ -21,6 +21,8 @@ class OS {
    void pressMove(int x, int y, int identifier);
    void pressEnd(int x, int y, int identifier);
    void redraw();
+
+   void postEvent(Event & ev);
     
    virtual int getScreenWidth() { return 0; }
    virtual int getScreenHeight() { return 0; }

@@ -38,3 +38,9 @@ void OS::redraw() {
     ev.dispatch(element);
   }
 }
+
+void OS::postEvent(Event & ev) {
+  for (auto & element : eventHandlers) {
+    ev.dispatch(element);
+  }
+}
