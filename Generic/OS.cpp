@@ -1,5 +1,6 @@
 #include "OS.h"
 #include "Event.h"
+#include "PaintEvent.h"
 
 void OS::pressBegin(int x, int y, int identifier) {
 	PressEvent ev;
@@ -32,9 +33,8 @@ void OS::pressEnd(int x, int y, int identifier) {
 }
 
 void OS::redraw() {
-
-	for (auto & element : eventHandlers) {
-		element->redraw();
-	}
-
+  PaintEvent ev;
+  for (auto & element : eventHandlers) {
+    ev.dispatch(element);
+  }
 }
