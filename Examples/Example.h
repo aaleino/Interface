@@ -8,8 +8,11 @@
 #ifndef _Example_h
 #define _Example_h
 
-#include <vector>
+#include "../Generic/EventHandler.h"
+#include "../Generic/Event.h"
+#include "../Generic/PaintEvent.h"
 
+#include <vector>
 
 class Example : public EventHandler {
 public:
@@ -17,10 +20,8 @@ public:
     
     void pressBegin(PressEvent &ev);
     void pressMove(PressEvent &ev){};
-    void pressEnd(PressEvent &ev){};
-    
-  
-    void redraw();
+    void pressEnd(PressEvent &ev){};  
+    void redraw(PaintEvent & ev);
     
 private:
     

@@ -1,26 +1,23 @@
-#include "../Generic/Event.h"
-#include "../Generic/EventHandler.h"
-
 #include "Example.h"
+
 #include "OS.h"
 #include "Context.h"
 #include "Color.h"
 
 // Example
 
-
 Example::Example()  {
     x = 100;
     y = 100;
-};
+}
 
-void Example::pressBegin(PressEvent &ev) {
+void Example::pressBegin(PressEvent & ev) {
     x = ev.getx();
     y = ev.gety();
-    // todo repaint request (now automatic)
-};
+    ev.requestRedraw();
+}
 
-void Example::redraw() {
+void Example::redraw(PaintEvent & ev) {
     std::unique_ptr <canvas::Context> graphicscontext = (OS::getInstance())->getScreenContext();
     canvas::Color red(255,0,0);
     canvas::Style style(red);
@@ -31,5 +28,5 @@ void Example::redraw() {
 
     graphicscontext->fillRect(x, y, boxwidth, boxheight);
     
-};
+}
 
