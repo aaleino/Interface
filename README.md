@@ -9,21 +9,20 @@ Installation
 
 User creates and sets the instance of OS manually.
 
-iOS example 
+iOS example:
 
+```C++
 #import <UIKit/UIKit.h>
-
 #import "AppDelegate.h"
-
 #include "iOS.h"
 
-std::shared_ptr <OS> OS::instance;
+std::shared_ptr<OS> OS::instance;
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        OS::setInstance(std::shared_ptr <OS> (new iOS));
+        OS::setInstance(std::shared_ptr<OS>(new iOS));
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
-
+```
